@@ -1,9 +1,14 @@
-import React, { Component } from "react";
+import React, { Component, useContext } from "react";
+import "../../styles/index.css";
+import { LanguageContext } from "../store/languageContext";
 
-export const Footer = () => (
-	<footer className="footer bg-secondary mt-auto py-3 text-center text-light">
-		<p className="mt-3">
-			Created with love by Arnau Oliveras
-		</p>
-	</footer>
-);
+export const Footer = (props) => {
+	const { language, changeLanguage, translations } = useContext(LanguageContext);
+	return (
+		<footer className="footer bg-dark mt-auto py-3 text-center text-light">
+			<p className="mt-3">
+				{translations[language].footer}
+			</p>
+		</footer>
+	);
+};

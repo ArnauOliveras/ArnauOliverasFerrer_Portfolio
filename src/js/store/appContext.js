@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import getState from "./flux.js";
+import { LanguageContext } from "./languageContext";
 
 export const Context = React.createContext(null);
 const injectContext = PassedComponent => {

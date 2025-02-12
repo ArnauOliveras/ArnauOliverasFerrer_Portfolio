@@ -4,45 +4,61 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
 module.exports = {
-  entry: [
-    './src/js/index.js'
-  ],
+  entry: ['./src/js/index.js'],
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'public'),
-    publicPath: '/'
+    publicPath: '/',
   },
   module: {
     rules: [
-        {
-          test: /\.(js|jsx)$/,
-          exclude: /node_modules/,
-          use: ['babel-loader']
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: ['babel-loader'],
+      },
+      {
+        test: /\.(css)$/,
+        use: [
+          {
+            loader: 'style-loader', // creates style nodes from JS strings
+          },
+          {
+            loader: 'css-loader', // translates CSS into CommonJS
+          },
+        ],
+      }, // css only files
+      {
+        test: /\.(png|svg|jpg|gif|jpeg|webp)$/,
+        use: {
+          loader: 'file-loader',
+          options: { name: '[name].[ext]' },
         },
-        {
-          test: /\.(css)$/, use: [{
-              loader: "style-loader" // creates style nodes from JS strings
-          }, {
-              loader: "css-loader" // translates CSS into CommonJS
-          }]
-        }, //css only files
-        {
-          test: /\.(png|svg|jpg|gif|jpeg|webp)$/, use: {
-            loader: 'file-loader',
-            options: { name: '[name].[ext]' }
-          }
-        }, //for images
-        { test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/, use: ['file-loader'] } //for fonts
-    ]
+      }, // for images
+      {
+        test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/,
+        use: ['file-loader'],
+      }, // for fonts
+      {
+        test: /\.pdf$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]', // Keep original file name and extension
+            outputPath: 'pdfs', // Save PDFs in a 'pdfs' folder in the output directory
+          },
+        },
+      }, // for PDF files
+    ],
   },
   resolve: {
-    extensions: ['*', '.js']
+    extensions: ['*', '.js'],
   },
   plugins: [
     new HtmlWebpackPlugin({
-        favicon: 'Icon.ico',
-        template: 'template.html'
+      favicon: 'Icon.ico',
+      template: 'template.html',
     }),
-    new Dotenv({ safe: true, systemvars: true })
-  ]
+    new Dotenv({ safe: true, systemvars: true }),
+  ],
 };
