@@ -1,8 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
-
-import { Contact } from "./views/contact";
 import { FullStack } from "./views/fullstack";
 import { Videogames } from "./views/videogames";
 import injectContext from "./store/appContext";
@@ -24,7 +22,6 @@ const Layout = () => {
 							<Route path="/videogames" element={<Videogames />} />
 							<Route path="*" element={<FullStack />} />
 						</Routes>
-						<Contact />
 						<Footer />
 					</LanguageProvider>
 				</ScrollToTop>

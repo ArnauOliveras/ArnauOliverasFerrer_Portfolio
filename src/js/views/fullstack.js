@@ -7,6 +7,7 @@ import { Experience } from "./experience";
 import { Skills } from "./skills";
 import { Projects } from "./projects";
 import { Navbar } from "../component/navbar";
+import { Contact } from "./contact";
 import "../../styles/index.css";
 import { LanguageContext } from "../store/languageContext";
 
@@ -24,11 +25,12 @@ export const FullStack = () => {
         <div >
             <Navbar rol={translations[language].fullStackDeveloper} />
             <Home cv={cvfullstack} rol={translations[language].fullStackDeveloper} otherrollink={otherRolLink} otherrol={translations[language].videogamesPortfolio} />
-            <AboutMe />
             <Projects rol="fullstack" />
             <Skills />
             <Experience />
             <Education />
+            <AboutMe />
+            <Contact cv={cvfullstack} />
         </div>
     );
 };

@@ -9,7 +9,7 @@ export const FullStackProjects = () => {
     const { store, actions } = useContext(Context);
 
     return (
-        <div className="bg-fullstackprojects pt-0">
+        <div className="bg-fullstackprojects pt-0" id="webProjects">
             <div className="container  pt-5 pb-2" >
                 <h3 className="robotmono pb-4">{"<" + translations[language].web + " />"}</h3>
                 <div className="album ">
@@ -27,29 +27,37 @@ export const FullStackProjects = () => {
 
 
                             return (
-                                <div key={index} className="col" >
-                                    <div className="card bg-project shadow-white-lg text-center" >
+                                <div key={index} className="col">
+                                    <div className="card bg-project shadow-white-lg text-center" style={{ height: "100%" }}>
                                         <div className="card-header">
                                             <strong className="fs-3">{titleWeb}</strong>
 
                                             <p className="pt-3">{description}</p>
                                         </div>
-
-                                        <a href={demoURL}>
-                                            <img
-                                                className="img-fluid bd-placeholder-img card-img-top"
-                                                src={iconURL}
-                                                alt={`${title} Icon`}
-                                            />
-                                        </a>
+                                        {demoURL && (
+                                            <a href={demoURL}>
+                                                <img
+                                                    className="img-fluid bd-placeholder-img card-img-top"
+                                                    src={iconURL}
+                                                    alt={`${title} Icon`}
+                                                />
+                                            </a>)}
+                                        {!demoURL && (
+                                            <a >
+                                                <img
+                                                    className="img-fluid bd-placeholder-img card-img-top"
+                                                    src={iconURL}
+                                                    alt={`${title} Icon`}
+                                                />
+                                            </a>)}
 
                                         <div className="card-body">
                                             {tech.map((techItem, index) => (
                                                 <Tech key={index} name={techItem} />
                                             ))}
-                                            <div className="btn-group mt-3" style={{ width: "100%", height: "100%" }}>
-                                                <a href={demoURL} type="button" className="btn btn-outline-light" >Demo</a>
-                                                <a href={githubURL} type="button" className="btn btn-outline-light" >GitHub</a>
+                                            <div className="btn-group mt-3" style={{ width: "100%" }}>
+                                                {demoURL && (<a href={demoURL} type="button" className="btn btn-outline-light" >Demo</a>)}
+                                                {githubURL && (<a href={githubURL} type="button" className="btn btn-outline-light" >GitHub</a>)}
                                             </div>
                                         </div>
                                     </div>

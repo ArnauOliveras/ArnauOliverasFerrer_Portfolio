@@ -19,6 +19,9 @@ nav{
   box-shadow: 0 3px 8px rgb(0, 0, 0);
   border-radius: 10px;
 }
+.bg-otherProjects{
+  background-color: #43443c;
+}
 
 .bg-home{
   background-color: #5a5d5e;
@@ -42,6 +45,45 @@ nav{
   
 }
 
+.bg-experience{
+  background-color: #494a5a;
+}
+.bg-experience-individual{
+  background-color: #5f7177;
+  border-radius: 10px;
+}
+.bg-education{
+  background-color: #647b81;
+  
+}
+.bg-education-individual{
+  background-color: #3c3e4e;
+  border-radius: 10px;
+}
+.bg-contact{
+  background-color: #0d0d0e;
+  
+}
+.bg-contact-individual{
+  background-color: #e8f3ff;
+  
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgb(0, 0, 0);
+  
+}
+.bg-home-individual{
+  background-color: #3d4744;
+  
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgb(0, 0, 0);
+  
+}
+
+.z-index-1{
+  position: relative;
+  z-index: 1;
+}
+
 .shadow-white{
   box-shadow: 0 3px 8px rgb(255, 255, 255, 0.2);
 }
@@ -54,7 +96,41 @@ nav{
   height: 400px;
   background: linear-gradient(to bottom, #5a5d5e, #354347);
   position: absolute;
-  top: 370px; 
+  top: 80%; 
+  z-index: -1;
+}
+
+.fade-div-projects-skills {
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(to bottom, #43443c, #0f1f1a);
+  position: absolute;
+  top: 100%; 
+  z-index: -1;
+}
+
+.fade-div-skills-experience {
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(to bottom, #0f1f1a, #494a5a);
+  position: absolute;
+  top: 95%; 
+  z-index: -1;
+}
+.fade-div-experience-education {
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(to bottom, #494a5a, #647b81);
+  position: absolute;
+  top: 100%; 
+  z-index: -1;
+}
+.fade-div-education-contact {
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(to bottom, #647b81, #354347);
+  position: absolute;
+  top: 100%; 
   z-index: -1;
 }
 
@@ -85,9 +161,5 @@ nav{
 }
 
 
-.wave-shape {
-  width: 100%;
-  height: 200px;
-  border-radius: 10px;
-  clip-path: polygon(0% 30%, 10% 50%, 20% 30%, 30% 50%, 40% 30%, 50% 50%, 60% 30%, 70% 50%, 80% 30%, 90% 50%, 100% 30%, 100% 100%, 0% 100%);
-}
+
+

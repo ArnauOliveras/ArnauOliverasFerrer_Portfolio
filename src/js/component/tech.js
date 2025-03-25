@@ -23,7 +23,6 @@ export const Tech = (props) => {
     };
 
     const renderIcon = (icon) => {
-        // Verificar si el icono es una URL de imagen
         const isImage = /\.(jpg|jpeg|png|gif|svg)$/i.test(icon);
 
         if (isImage) {
@@ -36,7 +35,7 @@ export const Tech = (props) => {
     return (
         <>
             {lv && (
-                <div className="border border-warning text-warning p-2 d-inline-block m-2 rounded shadow-white skill-container d-flex flex-column align-items-center text-center">
+                <div className="border border-warning text-warning p-2 d-inline-block m-2 rounded shadow-white skill-container d-flex flex-column align-items-center text-center" >
                     {renderIcon(icon)}
 
                     <div className="level-container mb-3">

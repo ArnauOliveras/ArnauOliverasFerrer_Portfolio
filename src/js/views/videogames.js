@@ -7,6 +7,8 @@ import { Experience } from "./experience.js";
 import { Skills } from "./skills";
 import { Projects } from "./projects.js";
 import { Navbar } from "../component/navbar.js";
+
+import { Contact } from "./contact";
 import "../../styles/index.css";
 import { LanguageContext } from "../store/languageContext";
 
@@ -23,11 +25,12 @@ export const Videogames = () => {
         <div >
             <Navbar rol={translations[language].videogamesDeveloper} />
             <Home cv={cvvideogames} rol={translations[language].videogamesDeveloper} otherrollink={otherRolLink} otherrol={translations[language].fullStackPortfolio} />
-            <AboutMe />
             <Projects rol="videogames" />
             <Skills />
             <Experience />
             <Education />
+            <AboutMe />
+            <Contact cv={cvvideogames} />
         </div>
     );
 };

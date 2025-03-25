@@ -4,6 +4,7 @@ import { Game } from "../component/game.js";
 import { WebTransition } from "../component/webtransition.js";
 import { VideogamesProjects } from "../component/videogamesprojects.js";
 import { FullStackProjects } from "../component/fullstackprojects.js";
+import { OtherProjects } from "../component/otherProjects.js";
 import "../../styles/index.css";
 import { LanguageContext } from "../store/languageContext.js";
 
@@ -16,7 +17,7 @@ export const Projects = (prop) => {
 
             {prop.rol === "fullstack" ? (
                 <>
-                    <div className="d-flex justify-content-center pt-5 bg-aboutMe">
+                    <div className="d-flex justify-content-center pt-5 bg-home">
                         <WebTransition />
                     </div>
                     <div className=" pt-5 pb-1 bg-fullstackprojects" >
@@ -30,6 +31,7 @@ export const Projects = (prop) => {
                         <Game />
                     </div>
                     <VideogamesProjects />
+                    <OtherProjects />
                 </>
             ) : (
                 <>
@@ -47,6 +49,7 @@ export const Projects = (prop) => {
                         <WebTransition />
                     </div>
                     <FullStackProjects />
+                    <OtherProjects />
                 </>
             )}
 

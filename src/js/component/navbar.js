@@ -57,17 +57,11 @@ export const Navbar = (props) => {
 					<span className="navbar-toggler-icon"></span>
 				</button>
 
-				<div className="collapse navbar-collapse" id="navbarNav">
+				<div className="collapse navbar-collapse " id="navbarNav">
 					<ul className="navbar-nav ms-auto">
 						<li className="nav-item">
 							<a className={`nav-link ${activeSection === "#home" ? "text-warning" : ""}`} href="#home" onClick={() => handleNavClick("#home")}>
 								{translations[language].home}
-							</a>
-						</li>
-						<li className="nav-item">
-							<a
-								className={`nav-link ${activeSection === "#aboutme" ? "text-warning" : ""}`} href="#aboutme" onClick={() => handleNavClick("#aboutme")}>
-								{translations[language].aboutMe}
 							</a>
 						</li>
 						<li className="nav-item">
@@ -92,6 +86,12 @@ export const Navbar = (props) => {
 							<a
 								className={`nav-link ${activeSection === "#education" ? "text-warning" : ""}`} href="#education" onClick={() => handleNavClick("#education")}>
 								{translations[language].education}
+							</a>
+						</li>
+						<li className="nav-item">
+							<a
+								className={`nav-link ${activeSection === "#aboutme" ? "text-warning" : ""}`} href="#aboutme" onClick={() => handleNavClick("#aboutme")}>
+								{translations[language].aboutMe}
 							</a>
 						</li>
 						<li className="nav-item">
