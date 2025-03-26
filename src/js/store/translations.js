@@ -114,7 +114,7 @@ const translations = {
         frontEnd: "Front-End",
         backEnd: "Back-End",
         databases: "Data Bases",
-        programmingLanguages: "Lenguages de programación",
+        programmingLanguages: "Lenguajes de programación",
         frameworksLibraries: "Frameworks y Bibliotecas",
         gameDevelopment: "Desarrollo de videojuegos",
         developmentTools: "Herramientas de desarrollo",
