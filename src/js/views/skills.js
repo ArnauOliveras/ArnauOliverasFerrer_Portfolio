@@ -22,7 +22,7 @@ export const Skills = () => {
                             <div className="mb-4 p-2 bg-skill">
                                 <h3 className="robotmono">{title}</h3>
                             </div>
-                            <div className="d-flex align-items-center flex-wrap" >
+                            <div className="d-flex align-items-stretch flex-wrap row-gap-3" >
                                 {tech.map((techItem, index) => (
                                     <Tech key={index} name={techItem.name} lv={techItem.lv} starting={techItem.starting} icon={techItem.icon} />
                                 ))}
